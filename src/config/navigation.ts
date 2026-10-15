@@ -22,6 +22,17 @@ export const baseNavItems: NavItem[] = [
   { id: 'avaliacoes', label: 'Avaliações', path: '/modulo', icon: 'Star', feature: 'reviews' },
   { id: 'personalizacao', label: 'Personalização', path: '/personalizacao', icon: 'Palette', feature: 'customization' },
   { id: 'modulos', label: 'Módulos', path: '/modulos', icon: 'SlidersHorizontal' },
+  { id: 'banco-funcionarios', label: 'Cadastro de funcionários', path: '/banco/funcionarios', icon: 'UserCog' },
+  { id: 'banco-servicos', label: 'Cadastro de serviços', path: '/banco/servicos', icon: 'Scissors' },
+  { id: 'banco-horarios', label: 'Cadastro de horários', path: '/banco/horarios', icon: 'Clock' },
+  { id: 'banco-agendamentos', label: 'Cadastro de agendamentos', path: '/banco/agendamentos', icon: 'CalendarDays' },
+  { id: 'banco-itens', label: 'Itens do agendamento', path: '/banco/itens', icon: 'List' },
+  { id: 'banco-pagamentos', label: 'Cadastro de pagamentos', path: '/banco/pagamentos', icon: 'Wallet' },
+  { id: 'banco-notificacoes', label: 'Cadastro de notificações', path: '/banco/notificacoes', icon: 'Bell' },
+  { id: 'banco-estabelecimento', label: 'Cadastro de estabelecimento', path: '/banco/estabelecimento', icon: 'Store' },
+  { id: 'banco-modulos', label: 'Cadastro de módulos', path: '/banco/modulos', icon: 'SlidersHorizontal' },
+  { id: 'banco-servico-funcionarios', label: 'Serviços por funcionário', path: '/banco/servico-funcionarios', icon: 'UserCog' },
+  { id: 'banco-configuracoes', label: 'Configuração do estabelecimento', path: '/banco/configuracoes', icon: 'SlidersHorizontal' },
 ];
 
 /** Filtra itens do menu conforme feature flags ativas. */

@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "humanizer/humanizer": {
+      "enabled": true
+    }
+  }
+}

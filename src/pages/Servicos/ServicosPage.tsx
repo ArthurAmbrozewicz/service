@@ -9,14 +9,15 @@ import { Input } from '@/components/Input/Input';
 import { Select } from '@/components/Select/Select';
 import { FeatureGate } from '@/components/FeatureGate/FeatureGate';
 import { useMockData } from '@/hooks/useMockData';
+import { useDados } from '@/context/DadosContext';
 import { useBusinessConfig } from '@/context/BusinessConfigContext';
-import { formatCurrency, generateId } from '@/utils/format';
+import { formatCurrency } from '@/utils/format';
 import type { Service } from '@/types';
 
 export function ServicosPage() {
-  const { services: initial, professionals } = useMockData();
+  const { services, professionals } = useMockData();
+  const { salvarServico, excluirServico } = useDados();
   const { config } = useBusinessConfig();
-  const [services, setServices] = useState(initial);
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Service | null>(null);
   const [form, setForm] = useState<{
@@ -58,7 +59,7 @@ export function ServicosPage() {
             <button type="button" className="icon-btn" onClick={() => { setEditing(r); setForm({ name: r.name, category: r.category, duration: r.duration, price: r.price, status: r.status }); setOpen(true); }}>
               <Pencil size={16} />
             </button>
-            <button type="button" className="icon-btn danger" onClick={() => setServices((prev) => prev.filter((s) => s.id !== r.id))}>
+            <button type="button" className="icon-btn danger" onClick={() => { excluirServico(r.id).catch((falha: Error) => window.alert(falha.message)); }}>
               <Trash2 size={16} />
             </button>
           </div>
@@ -68,16 +69,9 @@ export function ServicosPage() {
     [config.labels.professional, professionals]
   );
 
-  const save = () => {
+  const save = async () => {
     if (!form.name.trim()) return;
-    if (editing) {
-      setServices((prev) => prev.map((s) => (s.id === editing.id ? { ...s, ...form } : s)));
-    } else {
-      setServices((prev) => [
-        { id: generateId('s'), ...form, professionalIds: [professionals[0]?.id ?? 'p1'] },
-        ...prev,
-      ]);
-    }
+    await salvarServico(form, config.segment, editing?.id);
     setOpen(false);
     setEditing(null);
   };

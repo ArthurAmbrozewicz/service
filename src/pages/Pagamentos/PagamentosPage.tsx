@@ -7,6 +7,7 @@ import { Table, type Column } from '@/components/Table/Table';
 import { Button } from '@/components/Button/Button';
 import { FeatureGate } from '@/components/FeatureGate/FeatureGate';
 import { useMockData } from '@/hooks/useMockData';
+import { useDados } from '@/context/DadosContext';
 import { useBusinessConfig } from '@/context/BusinessConfigContext';
 import { formatCurrency, formatDate } from '@/utils/format';
 import type { Payment } from '@/types';
@@ -19,9 +20,9 @@ const STATUS_VARIANT: Record<string, 'success' | 'warning' | 'danger' | 'neutral
 };
 
 export function PagamentosPage() {
-  const { payments: initial } = useMockData();
+  const { payments } = useMockData();
+  const { confirmarPagamento } = useDados();
   const { config, isFeatureEnabled } = useBusinessConfig();
-  const [payments, setPayments] = useState(initial);
   const [filter, setFilter] = useState<'todos' | 'unico' | 'recorrente'>('todos');
 
   const stats = useMemo(() => {
@@ -53,7 +54,7 @@ export function PagamentosPage() {
       header: 'Ações',
       render: (r) =>
         r.status !== 'pago' ? (
-          <Button size="sm" variant="outline" onClick={() => setPayments((prev) => prev.map((p) => (p.id === r.id ? { ...p, status: 'pago' } : p)))}>
+          <Button size="sm" variant="outline" onClick={() => { confirmarPagamento(r.id).catch((falha: Error) => window.alert(falha.message)); }}>
             Confirmar
           </Button>
         ) : (

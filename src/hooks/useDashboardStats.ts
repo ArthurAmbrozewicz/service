@@ -43,7 +43,7 @@ export function useDashboardStats(): StatCardConfig[] {
         base.push(
           { id: '1', label: 'Alunos ativos', value: data.customers.filter((c) => c.enrollmentStatus === 'ativa').length, icon: 'Users' },
           { id: '2', label: 'Planos vencendo', value: data.customers.filter((c) => c.enrollmentStatus === 'vencida').length, icon: 'AlertTriangle', feature: 'recurringPlans' },
-          { id: '3', label: 'Frequência média', value: `${Math.round(data.customers.reduce((s, c) => s + (c.frequency ?? 0), 0) / data.customers.length)}x`, icon: 'Activity', feature: 'frequency', trend: 'visitas/mês' },
+          { id: '3', label: 'Frequência média', value: `${Math.round(data.customers.reduce((s, c) => s + (c.frequency ?? 0), 0) / (data.customers.length || 1))}x`, icon: 'Activity', feature: 'frequency', trend: 'visitas/mês' },
           { id: '4', label: 'Receita mensal', value: formatCurrency(revenue), icon: 'Wallet' }
         );
         break;

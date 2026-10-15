@@ -8,11 +8,13 @@ import { Textarea } from '@/components/Textarea/Textarea';
 import { Button } from '@/components/Button/Button';
 import { FeatureGate } from '@/components/FeatureGate/FeatureGate';
 import { useMockData } from '@/hooks/useMockData';
+import { useDados } from '@/context/DadosContext';
 import { useBusinessConfig } from '@/context/BusinessConfigContext';
 import { getTodayISO } from '@/utils/format';
 
 export function AgendamentoPage() {
   const { customers, services, professionals, pets } = useMockData();
+  const { criarAgendamento } = useDados();
   const { config, isFeatureEnabled } = useBusinessConfig();
   const rules = config.schedulingRules;
   const navigate = useNavigate();
@@ -38,10 +40,24 @@ export function AgendamentoPage() {
     return opts;
   })();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!form.customerId || !form.serviceId || !form.professionalId) return;
     if (rules.requirePetSelection && !form.petId) return;
+    const servico = services.find((item) => item.id === form.serviceId);
+    const pet = pets.find((item) => item.id === form.petId);
+    await criarAgendamento({
+      customerId: form.customerId,
+      serviceId: form.serviceId,
+      professionalId: form.professionalId,
+      date: form.date,
+      time: form.time,
+      notes: form.notes,
+      paymentMethod: form.paymentMethod,
+      petName: pet?.name ?? '',
+      segment: config.segment,
+      price: servico?.price ?? 0,
+    });
     setSuccess(true);
     setTimeout(() => navigate('/agenda'), 1200);
   };

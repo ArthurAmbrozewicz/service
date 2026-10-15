@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 import { Input } from '@/components/Input/Input';
 import { Button } from '@/components/Button/Button';
+import { entrar } from '@/api/banco';
 import { storage } from '@/utils/storage';
 import { useBusinessConfig } from '@/context/BusinessConfigContext';
 import { SEGMENT_LABELS } from '@/config/business';
 
 export function LoginPage() {
-  const [email, setEmail] = useState('admin@demo.com');
-  const [password, setPassword] = useState('demo123');
+  const [email, setEmail] = useState('leo@email.com');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -20,14 +21,19 @@ export function LoginPage() {
     navigate('/dashboard');
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email || !password) {
       setError('Preencha e-mail e senha.');
       return;
     }
     setError('');
-    enter();
+    try {
+      await entrar(email, password);
+      enter();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'E-mail ou senha inválidos.');
+    }
   };
 
   return (
@@ -83,7 +89,7 @@ export function LoginPage() {
           <Button type="button" variant="outline" fullWidth onClick={enter}>
             Visualizar demonstração
           </Button>
-          <p className="login-hint">Login simulado — qualquer credencial funciona neste protótipo.</p>
+          <p className="login-hint">Contas iniciais: leo@email.com e ana@email.com. Senha: 123. A demonstração entra sem senha.</p>
         </form>
       </div>
     </div>

@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 2000 1200">
+<rect width="2000" height="1200" fill="#ffffff"/>
+<defs><marker id="req" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#c98a3c"/></marker></defs>
+<rect x="720.0" y="34" width="560" height="60" rx="9" fill="#1f2937" stroke="#1f2937" stroke-width="1.4"/>
+<text x="1000.0" y="60" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700" text-anchor="middle" letter-spacing="1.4">SERVICE</text>
+<text x="1000.0" y="81" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#c7d0dc" font-weight="400" text-anchor="middle">Linha de Produto de Software — gestão de serviços locais</text>
+<line x1="1000.0" y1="94" x2="1000.0" y2="122" stroke="#9aa3b0" stroke-width="1.6"/>
+<line x1="290.0" y1="122" x2="1698.0" y2="122" stroke="#9aa3b0" stroke-width="1.6"/>
+<line x1="290.0" y1="122" x2="290.0" y2="142" stroke="#9aa3b0" stroke-width="1.6"/>
+<circle cx="290.0" cy="141" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<rect x="50" y="150" width="480" height="62" rx="8" fill="#eef2f7" stroke="#59677a" stroke-width="1.8"/>
+<text x="290.0" y="175" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#1a1f2b" font-weight="700" text-anchor="middle">Núcleo (core)</text>
+<text x="290.0" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6472" font-weight="400" text-anchor="middle">comum a todos os produtos</text>
+<line x1="74" y1="212" x2="74" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="267.0" x2="85" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="246" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="267.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="272.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Autenticação e perfis</text>
+<line x1="74" y1="267.0" x2="74" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="321.0" x2="85" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="300" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="321.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="326.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Dashboard de indicadores</text>
+<line x1="74" y1="321.0" x2="74" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="375.0" x2="85" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="354" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="375.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="380.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Clientes (CRUD)</text>
+<line x1="74" y1="375.0" x2="74" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="429.0" x2="85" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="408" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="429.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="434.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Serviços (CRUD)</text>
+<line x1="74" y1="429.0" x2="74" y2="483.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="483.0" x2="85" y2="483.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="462" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="483.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="488.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Agendamento</text>
+<line x1="114" y1="504" x2="114" y2="537.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="114" y1="537.0" x2="125" y2="537.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="138" y="516" width="392" height="42" rx="6" fill="#fbfcfd" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="131.5" cy="537.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="152" y="542.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Regras de agenda</text>
+<line x1="74" y1="483.0" x2="74" y2="591.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="591.0" x2="85" y2="591.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="570" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="591.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="596.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Profissionais</text>
+<line x1="74" y1="591.0" x2="74" y2="645.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="645.0" x2="85" y2="645.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="624" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="645.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="650.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Pagamentos</text>
+<line x1="74" y1="645.0" x2="74" y2="699.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="699.0" x2="85" y2="699.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="678" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="699.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="704.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Notificações</text>
+<line x1="74" y1="699.0" x2="74" y2="753.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="74" y1="753.0" x2="85" y2="753.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="98" y="732" width="432" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="91.5" cy="753.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="112" y="758.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Histórico de atendimentos</text>
+<line x1="762.0" y1="122" x2="762.0" y2="142" stroke="#9aa3b0" stroke-width="1.6"/>
+<circle cx="762.0" cy="141" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<rect x="582" y="150" width="360" height="62" rx="8" fill="#eef2f7" stroke="#59677a" stroke-width="1.8"/>
+<text x="762.0" y="175" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#1a1f2b" font-weight="700" text-anchor="middle">Personalização</text>
+<text x="762.0" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6472" font-weight="400" text-anchor="middle">identidade do cliente</text>
+<line x1="606" y1="212" x2="606" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="606" y1="267.0" x2="617" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="630" y="246" width="312" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="623.5" cy="267.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="644" y="272.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Identidade (nome, logo)</text>
+<line x1="606" y1="267.0" x2="606" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="606" y1="321.0" x2="617" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="630" y="300" width="312" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="623.5" cy="321.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="644" y="326.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Tema e cores</text>
+<line x1="606" y1="321.0" x2="606" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="606" y1="375.0" x2="617" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="630" y="354" width="312" height="42" rx="6" fill="#ffffff" stroke="#59677a" stroke-width="1.2"/>
+<circle cx="623.5" cy="375.0" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="644" y="380.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Rótulos do domínio</text>
+<line x1="1194.0" y1="122" x2="1194.0" y2="142" stroke="#9aa3b0" stroke-width="1.6"/>
+<circle cx="1194.0" cy="141" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<rect x="994" y="150" width="400" height="62" rx="8" fill="#eaf4ee" stroke="#3f8f63" stroke-width="1.8"/>
+<text x="1194.0" y="175" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#1a1f2b" font-weight="700" text-anchor="middle">Segmento</text>
+<text x="1194.0" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6472" font-weight="400" text-anchor="middle">alternativa — exatamente 1</text>
+<line x1="1018" y1="212" x2="1018" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1018" y1="267.0" x2="1029" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1042" y="246" width="352" height="42" rx="6" fill="#ffffff" stroke="#3f8f63" stroke-width="1.2"/>
+<text x="1056" y="272.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Petshop</text>
+<line x1="1018" y1="267.0" x2="1018" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1018" y1="321.0" x2="1029" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1042" y="300" width="352" height="42" rx="6" fill="#ffffff" stroke="#3f8f63" stroke-width="1.2"/>
+<text x="1056" y="326.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Barbearia</text>
+<line x1="1018" y1="321.0" x2="1018" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1018" y1="375.0" x2="1029" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1042" y="354" width="352" height="42" rx="6" fill="#ffffff" stroke="#3f8f63" stroke-width="1.2"/>
+<text x="1056" y="380.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Academia</text>
+<line x1="1018" y1="375.0" x2="1018" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1018" y1="429.0" x2="1029" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1042" y="408" width="352" height="42" rx="6" fill="#ffffff" stroke="#3f8f63" stroke-width="1.2"/>
+<text x="1056" y="434.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Clínica de Estética</text>
+<line x1="1698.0" y1="122" x2="1698.0" y2="142" stroke="#9aa3b0" stroke-width="1.6"/>
+<circle cx="1698.0" cy="141" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<rect x="1446" y="150" width="504" height="62" rx="8" fill="#fdf3e7" stroke="#c98a3c" stroke-width="1.8"/>
+<text x="1698.0" y="175" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#1a1f2b" font-weight="700" text-anchor="middle">Módulos opcionais</text>
+<text x="1698.0" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6472" font-weight="400" text-anchor="middle">combinação livre</text>
+<line x1="1470" y1="212" x2="1470" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1470" y1="267.0" x2="1481" y2="267.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1494" y="246" width="456" height="42" rx="6" fill="#ffffff" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1487.5" cy="267.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1508" y="272.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Ficha do Pet</text>
+<line x1="1510" y1="288" x2="1510" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1510" y1="321.0" x2="1521" y2="321.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1534" y="300" width="416" height="42" rx="6" fill="#fbfcfd" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1527.5" cy="321.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1548" y="326.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Vacinação</text>
+<line x1="1470" y1="267.0" x2="1470" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1470" y1="375.0" x2="1481" y2="375.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1494" y="354" width="456" height="42" rx="6" fill="#ffffff" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1487.5" cy="375.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1508" y="380.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Avaliações</text>
+<line x1="1470" y1="375.0" x2="1470" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1470" y1="429.0" x2="1481" y2="429.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1494" y="408" width="456" height="42" rx="6" fill="#ffffff" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1487.5" cy="429.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1508" y="434.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Anamnese</text>
+<line x1="1470" y1="429.0" x2="1470" y2="483.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1470" y1="483.0" x2="1481" y2="483.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1494" y="462" width="456" height="42" rx="6" fill="#ffffff" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1487.5" cy="483.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1508" y="488.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Planos Recorrentes</text>
+<line x1="1510" y1="504" x2="1510" y2="537.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1510" y1="537.0" x2="1521" y2="537.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1534" y="516" width="416" height="42" rx="6" fill="#fbfcfd" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1527.5" cy="537.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1548" y="542.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Controle de Frequência</text>
+<line x1="1470" y1="483.0" x2="1470" y2="591.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<line x1="1470" y1="591.0" x2="1481" y2="591.0" stroke="#9aa3b0" stroke-width="1.4"/>
+<rect x="1494" y="570" width="456" height="42" rx="6" fill="#ffffff" stroke="#c98a3c" stroke-width="1.2"/>
+<circle cx="1487.5" cy="591.0" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="1508" y="596.0" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Pacotes de sessões</text>
+<path d="M 1490 267.0 C 1444.0 267.0, 1444.0 267.0, 1404 267.0" fill="none" stroke="#c98a3c" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#req)"/>
+<path d="M 1490 429.0 C 1444.0 429.0, 1444.0 429.0, 1404 429.0" fill="none" stroke="#c98a3c" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#req)"/>
+<text x="1420" y="238" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" fill="#c98a3c" font-weight="600" text-anchor="middle">requer</text>
+<rect x="40" y="838" width="860" height="322" rx="9" fill="#fbfcfd" stroke="#dde3ea" stroke-width="1.2"/>
+<text x="66" y="870" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#5b6472" font-weight="700" text-anchor="start" letter-spacing="1.2">LEGENDA</text>
+<circle cx="84" cy="895" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="108" y="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#1a1f2b" font-weight="400" text-anchor="start">Feature obrigatória — presente em todo produto da linha</text>
+<circle cx="84" cy="925" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="108" y="930" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#1a1f2b" font-weight="400" text-anchor="start">Feature opcional — ponto de variação, ativada por feature flag</text>
+<rect x="72" y="943" width="26" height="15" rx="4" fill="#eaf4ee" stroke="#3f8f63" stroke-width="1.4"/>
+<text x="108" y="960" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#1a1f2b" font-weight="400" text-anchor="start">Grupo alternativo (XOR) — exatamente uma variante é selecionada</text>
+<line x1="72" y1="980" x2="94" y2="980" stroke="#c98a3c" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#req)"/>
+<text x="108" y="990" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#1a1f2b" font-weight="400" text-anchor="start">Restrição entre ramos: a feature exige a variante indicada</text>
+<text x="66" y="1026" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#5b6472" font-weight="700" text-anchor="start">Sub-feature implica dependência do pai:</text>
+<text x="66" y="1049" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#5b6472" font-weight="400" text-anchor="start">Vacinação requer Ficha do Pet · Controle de Frequência requer Planos Recorrentes</text>
+<text x="66" y="1080" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#5b6472" font-weight="700" text-anchor="start">Binding (momento da seleção):</text>
+<text x="66" y="1103" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#5b6472" font-weight="400" text-anchor="start">tempo de execução — BusinessConfig + feature flags, sem recompilar o produto</text>
+<text x="66" y="1134" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#5b6472" font-weight="400" text-anchor="start">Rastreabilidade: src/config/features/index.ts · src/config/business/index.ts</text>
+<rect x="940" y="838" width="1020" height="322" rx="9" fill="#fbfcfd" stroke="#dde3ea" stroke-width="1.2"/>
+<text x="966" y="870" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#5b6472" font-weight="700" text-anchor="start" letter-spacing="1.2">DERIVAÇÃO DOS PRODUTOS (engenharia de aplicação)</text>
+<text x="966" y="906" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="700" text-anchor="start">Feature opcional</text>
+<text x="1340" y="906" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="700" text-anchor="middle">Petshop</text>
+<text x="1500" y="906" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="700" text-anchor="middle">Barbearia</text>
+<text x="1660" y="906" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="700" text-anchor="middle">Academia</text>
+<text x="1830" y="906" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="700" text-anchor="middle">Clínica</text>
+<line x1="966" y1="919" x2="1934" y2="919" stroke="#dde3ea" stroke-width="1.4"/>
+<text x="966" y="950" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Avaliações</text>
+<circle cx="1340" cy="945" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="945" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="945" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="945" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="982" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Ficha do Pet</text>
+<circle cx="1340" cy="977" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="977" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="977" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="977" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="1014" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Vacinação</text>
+<circle cx="1340" cy="1009" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="1009" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="1009" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="1009" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="1046" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Anamnese</text>
+<circle cx="1340" cy="1041" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="1041" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="1041" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="1041" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="1078" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Planos Recorrentes</text>
+<circle cx="1340" cy="1073" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="1073" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="1073" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="1073" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="1110" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Controle de Frequência</text>
+<circle cx="1340" cy="1105" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="1105" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="1105" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="1105" r="6.5" fill="#ffffff" stroke="#1a1f2b" stroke-width="1.6"/>
+<text x="966" y="1142" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13.5" fill="#1a1f2b" font-weight="400" text-anchor="start">Pacotes</text>
+<circle cx="1340" cy="1137" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1500" cy="1137" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1660" cy="1137" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+<circle cx="1830" cy="1137" r="6.5" fill="#1a1f2b" stroke="#1a1f2b" stroke-width="1.6"/>
+</svg>

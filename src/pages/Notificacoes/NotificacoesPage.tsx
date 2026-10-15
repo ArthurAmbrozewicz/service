@@ -6,9 +6,9 @@ import { Badge } from '@/components/Badge/Badge';
 import { Button } from '@/components/Button/Button';
 import { FeatureGate } from '@/components/FeatureGate/FeatureGate';
 import { useMockData } from '@/hooks/useMockData';
+import { useDados } from '@/context/DadosContext';
 import { useBusinessConfig } from '@/context/BusinessConfigContext';
-import { formatDate, generateId } from '@/utils/format';
-import type { NotificationItem } from '@/types';
+import { formatDate } from '@/utils/format';
 
 const TYPE_LABEL: Record<string, string> = {
   confirmacao: 'Confirmação',
@@ -46,24 +46,20 @@ const TEMPLATES: Record<string, { title: string; message: string }> = {
 };
 
 export function NotificacoesPage() {
-  const { notifications: initial } = useMockData();
+  const { notifications: items } = useMockData();
+  const { criarNotificacao, marcarNotificacao } = useDados();
   const { config } = useBusinessConfig();
-  const [items, setItems] = useState(initial);
   const [toast, setToast] = useState('');
 
-  const sendReminder = () => {
+  const sendReminder = async () => {
     const template = TEMPLATES[config.segment];
-    const item: NotificationItem = {
-      id: generateId('n'),
-      type: 'lembrete',
+    await criarNotificacao({
       title: template.title,
       message: template.message,
       date: new Date().toISOString().slice(0, 10),
-      read: false,
       segment: config.segment,
-    };
-    setItems((prev) => [item, ...prev]);
-    setToast('Lembrete simulado enviado com template do segmento!');
+    });
+    setToast('Lembrete gravado no banco.');
     setTimeout(() => setToast(''), 2500);
   };
 
@@ -99,7 +95,7 @@ export function NotificacoesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    onClick={() => setItems((prev) => prev.map((i) => (i.id === n.id ? { ...i, read: true } : i)))}
+                    onClick={() => { marcarNotificacao(n.id).catch((falha: Error) => window.alert(falha.message)); }}
                   >
                     Marcar lida
                   </Button>

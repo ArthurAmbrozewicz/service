@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "service-backend"
+version = "1.0.0"
+description = "Componente reutilizável do Service: cadastros, padrões de projeto e banco."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["backend*"]
+
+[tool.setuptools.package-data]
+"backend.banco" = ["schema.sql"]

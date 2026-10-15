@@ -1,16 +1,16 @@
 import { BrowserRouter } from 'react-router-dom';
 import { BusinessConfigProvider } from '@/context/BusinessConfigProvider';
-import { PetsProvider } from '@/context/PetsContext';
+import { DadosProvider } from '@/context/DadosContext';
 import { AppRoutes } from '@/routes';
 
 export default function App() {
   return (
     <BusinessConfigProvider>
-      <PetsProvider>
+      <DadosProvider>
         <BrowserRouter>
           <AppRoutes />
         </BrowserRouter>
-      </PetsProvider>
+      </DadosProvider>
     </BusinessConfigProvider>
   );
 }

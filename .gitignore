@@ -9,6 +9,9 @@ lerna-debug.log*
 
 node_modules
 dist
+build
+*.egg-info
+backend/banco/service.db
 dist-ssr
 *.local
 

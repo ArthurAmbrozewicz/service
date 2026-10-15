@@ -50,7 +50,7 @@ export function PetFormModal({ open, onClose, tutors, lockedTutor, onCreated }: 
     onClose();
   };
 
-  const save = () => {
+  const save = async () => {
     const tutorId = lockedTutor?.id ?? form.tutorId;
     const tutor = lockedTutor
       ? { id: lockedTutor.id, name: lockedTutor.name }
@@ -78,7 +78,7 @@ export function PetFormModal({ open, onClose, tutors, lockedTutor, onCreated }: 
       vaccinationStatus: form.vaccinationStatus,
     };
 
-    const pet = addPet(input);
+    const pet = await addPet(input);
     onCreated?.(pet);
     handleClose();
   };

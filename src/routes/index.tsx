@@ -3,7 +3,6 @@ import { AppLayout } from '@/layouts/AppLayout';
 import { LoginPage } from '@/pages/Login/LoginPage';
 import { DashboardPage } from '@/pages/Dashboard/DashboardPage';
 import { AgendaPage } from '@/pages/Agenda/AgendaPage';
-import { ClientesPage } from '@/pages/Clientes/ClientesPage';
 import { ClienteDetalhesPage } from '@/pages/ClienteDetalhes/ClienteDetalhesPage';
 import { ServicosPage } from '@/pages/Servicos/ServicosPage';
 import { AgendamentoPage } from '@/pages/Agendamento/AgendamentoPage';
@@ -13,6 +12,20 @@ import { ProfissionaisPage } from '@/pages/Profissionais/ProfissionaisPage';
 import { ModuloSegmentoPage } from '@/pages/ModuloSegmento/ModuloSegmentoPage';
 import { PersonalizacaoPage } from '@/pages/Personalizacao/PersonalizacaoPage';
 import { ModulosPage } from '@/pages/Modulos/ModulosPage';
+import {
+  AgendamentosBancoPage,
+  ClientesBancoPage,
+  EstabelecimentoBancoPage,
+  FuncionariosBancoPage,
+  HorariosBancoPage,
+  ItensAgendamentoBancoPage,
+  ConfiguracoesBancoPage,
+  ModulosBancoPage,
+  NotificacoesBancoPage,
+  PagamentosBancoPage,
+  ServicoFuncionariosBancoPage,
+  ServicosBancoPage,
+} from '@/pages/banco/paginas';
 import { storage } from '@/utils/storage';
 
 function ProtectedRoute() {
@@ -30,7 +43,7 @@ export function AppRoutes() {
         <Route element={<AppLayout />}>
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/agenda" element={<AgendaPage />} />
-          <Route path="/clientes" element={<ClientesPage />} />
+          <Route path="/clientes" element={<ClientesBancoPage />} />
           <Route path="/clientes/:id" element={<ClienteDetalhesPage />} />
           <Route path="/servicos" element={<ServicosPage />} />
           <Route path="/agendamentos/novo" element={<AgendamentoPage />} />
@@ -40,6 +53,18 @@ export function AppRoutes() {
           <Route path="/modulo" element={<ModuloSegmentoPage />} />
           <Route path="/personalizacao" element={<PersonalizacaoPage />} />
           <Route path="/modulos" element={<ModulosPage />} />
+          <Route path="/banco/clientes" element={<Navigate to="/clientes" replace />} />
+          <Route path="/banco/funcionarios" element={<FuncionariosBancoPage />} />
+          <Route path="/banco/servicos" element={<ServicosBancoPage />} />
+          <Route path="/banco/horarios" element={<HorariosBancoPage />} />
+          <Route path="/banco/agendamentos" element={<AgendamentosBancoPage />} />
+          <Route path="/banco/itens" element={<ItensAgendamentoBancoPage />} />
+          <Route path="/banco/pagamentos" element={<PagamentosBancoPage />} />
+          <Route path="/banco/notificacoes" element={<NotificacoesBancoPage />} />
+          <Route path="/banco/estabelecimento" element={<EstabelecimentoBancoPage />} />
+          <Route path="/banco/modulos" element={<ModulosBancoPage />} />
+          <Route path="/banco/servico-funcionarios" element={<ServicoFuncionariosBancoPage />} />
+          <Route path="/banco/configuracoes" element={<ConfiguracoesBancoPage />} />
         </Route>
       </Route>
       <Route path="/" element={<Navigate to="/login" replace />} />

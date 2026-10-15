@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "api": "python3 -m backend.api.servidor",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

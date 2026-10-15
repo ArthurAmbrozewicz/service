@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { atualizar, listar } from '@/api/banco';
 import type {
   BusinessConfig,
   BusinessSegment,
@@ -19,12 +20,37 @@ interface ProviderProps {
 
 export function BusinessConfigProvider({ children }: ProviderProps) {
   const [config, setConfig] = useState<BusinessConfig>(() => storage.getInitialConfig());
+  const [pronto, setPronto] = useState(false);
+  const configuracaoId = useRef<number | null>(null);
 
-  // Persiste e aplica tema sempre que a configuração muda.
+  useEffect(() => {
+    listar('configuracoes')
+      .then((linhas) => {
+        const linha = linhas[0];
+        if (linha) {
+          configuracaoId.current = linha.id;
+          if (linha.conteudo) {
+            setConfig(JSON.parse(String(linha.conteudo)) as BusinessConfig);
+          }
+        }
+      })
+      .catch(() => undefined)
+      .finally(() => setPronto(true));
+  }, []);
+
+  // Persiste no navegador e na tabela configuracoes.
   useEffect(() => {
     storage.saveConfig(config);
     applyTheme(config.theme);
-  }, [config]);
+    if (!pronto || configuracaoId.current == null) return;
+    atualizar('configuracoes', configuracaoId.current, {
+      estabelecimento_id: 1,
+      intervalo: config.schedulingRules.interval,
+      cores: config.theme.primary,
+      rotulos: config.labels.customer,
+      conteudo: JSON.stringify(config),
+    }).catch(() => undefined);
+  }, [config, pronto]);
 
   const isFeatureEnabled = useCallback(
     (feature: FeatureKey) => checkFeature(config.modules, feature),
