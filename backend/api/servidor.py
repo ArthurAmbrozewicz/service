@@ -3,7 +3,7 @@ import json
 import sqlite3
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from backend.api import padroes
+from backend.api import documentacao, padroes
 from backend.banco import repositorio
 from backend.conexao_banco import ConexaoBanco
 from backend.pessoas import Funcionario
@@ -18,7 +18,15 @@ class Api(BaseHTTPRequestHandler):
         self._responder(204, b"")
 
     def do_GET(self):
-        """Lista ou busca um registro. Segue para _rota e depois repositorio.listar ou repositorio.buscar."""
+        """Lista ou busca um registro. Segue para _rota e depois repositorio.listar ou repositorio.buscar. /docs e /openapi.json seguem para documentacao."""
+        caminho = self.path.split("?")[0].rstrip("/")
+        if caminho == "/docs":
+            self._responder(200, documentacao.PAGINA.encode("utf-8"), "text/html; charset=utf-8")
+            return
+        if caminho == "/openapi.json":
+            corpo = json.dumps(documentacao.especificacao(), ensure_ascii=False).encode("utf-8")
+            self._responder(200, corpo, "application/json; charset=utf-8")
+            return
         tabela, registro_id = self._rota()
         if tabela is None:
             self._json(404, {"erro": "Rota não encontrada"})
@@ -192,7 +200,7 @@ def main() -> None:
     """Sobe a API em 127.0.0.1:8000. Primeiro abre o Singleton, que cria as tabelas."""
     ConexaoBanco.get_instancia()
     servidor = ThreadingHTTPServer(("127.0.0.1", 8000), Api)
-    print("API em http://127.0.0.1:8000", flush=True)
+    print("API em http://127.0.0.1:8000 (Swagger em http://127.0.0.1:8000/docs)", flush=True)
     servidor.serve_forever()
 
 
