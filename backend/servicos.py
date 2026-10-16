@@ -1,9 +1,8 @@
 from dataclasses import fields
 
-from backend.comunicacao import EstrategiaNotificacao, Notificacao
 from backend.conexao_banco import ConexaoBanco
 from backend.pessoas import Cliente, Funcionario
-from backend.venda import Agendamento, AgendamentoServico, Pagamento, RegrasAgenda
+from backend.venda import Agendamento, AgendamentoServico, RegrasAgenda
 
 
 class AutenticacaoService:
@@ -48,33 +47,3 @@ class AgendamentoService:
             item.agendamento_id = agendamento.id
             banco.salvar("agendamento_servicos", item)
         return agendamento
-
-
-class PagamentoService:
-    """Contexto do Template Method de pagamento."""
-
-    def __init__(self):
-        self.ultimo_codigo = ""
-
-    def cobrar(self, pagamento: Pagamento) -> str:
-        """Chama pagamento.executar, que valida, autoriza e grava. Guarda o texto em ultimo_codigo."""
-        self.ultimo_codigo = pagamento.executar()
-        return self.ultimo_codigo
-
-
-class NotificacaoService:
-    """Contexto do Strategy de notificação. Guarda a estratégia e chama enviar()."""
-
-    def __init__(self, estrategia: EstrategiaNotificacao):
-        self.estrategia = estrategia
-
-    def definir_estrategia(self, estrategia: EstrategiaNotificacao) -> None:
-        """Troca a estratégia em execução. O próximo enviar usa a nova."""
-        self.estrategia = estrategia
-
-    def enviar(self, notificacao: Notificacao) -> str:
-        """Chama estrategia.enviar, copia o tipo para a notificação e grava em notificacoes."""
-        texto = self.estrategia.enviar(notificacao.titulo, notificacao.mensagem)
-        notificacao.tipo = self.estrategia.tipo
-        ConexaoBanco.get_instancia().salvar("notificacoes", notificacao)
-        return texto

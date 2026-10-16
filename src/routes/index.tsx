@@ -12,6 +12,11 @@ import { ProfissionaisPage } from '@/pages/Profissionais/ProfissionaisPage';
 import { ModuloSegmentoPage } from '@/pages/ModuloSegmento/ModuloSegmentoPage';
 import { PersonalizacaoPage } from '@/pages/Personalizacao/PersonalizacaoPage';
 import { ModulosPage } from '@/pages/Modulos/ModulosPage';
+import { NotificacaoDemoPage } from '@/pages/Demonstracoes/NotificacaoDemoPage';
+import { AlocacaoDemoPage } from '@/pages/Demonstracoes/AlocacaoDemoPage';
+import { PagamentoDemoPage } from '@/pages/Demonstracoes/PagamentoDemoPage';
+import { RelatorioDemoPage } from '@/pages/Demonstracoes/RelatorioDemoPage';
+import { AtendimentoDemoPage } from '@/pages/Demonstracoes/AtendimentoDemoPage';
 import {
   AgendamentosBancoPage,
   ClientesBancoPage,
@@ -53,6 +58,11 @@ export function AppRoutes() {
           <Route path="/modulo" element={<ModuloSegmentoPage />} />
           <Route path="/personalizacao" element={<PersonalizacaoPage />} />
           <Route path="/modulos" element={<ModulosPage />} />
+          <Route path="/demonstracoes/notificacoes" element={<NotificacaoDemoPage />} />
+          <Route path="/demonstracoes/alocacao" element={<AlocacaoDemoPage />} />
+          <Route path="/demonstracoes/pagamento" element={<PagamentoDemoPage />} />
+          <Route path="/demonstracoes/relatorios" element={<RelatorioDemoPage />} />
+          <Route path="/demonstracoes/atendimento" element={<AtendimentoDemoPage />} />
           <Route path="/banco/clientes" element={<Navigate to="/clientes" replace />} />
           <Route path="/banco/funcionarios" element={<FuncionariosBancoPage />} />
           <Route path="/banco/servicos" element={<ServicosBancoPage />} />

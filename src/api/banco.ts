@@ -1,6 +1,6 @@
 export type Registro = { id: number } & Record<string, string | number>;
 
-async function pedir<T>(caminho: string, opcoes?: RequestInit): Promise<T> {
+export async function pedir<T>(caminho: string, opcoes?: RequestInit): Promise<T> {
   const resposta = await fetch(caminho, {
     ...opcoes,
     headers: { 'Content-Type': 'application/json', ...opcoes?.headers },

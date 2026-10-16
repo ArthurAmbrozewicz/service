@@ -3,6 +3,7 @@ import json
 import sqlite3
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
+from backend.api import padroes
 from backend.banco import repositorio
 from backend.conexao_banco import ConexaoBanco
 from backend.pessoas import Funcionario
@@ -32,9 +33,13 @@ class Api(BaseHTTPRequestHandler):
         self._json(200, registro)
 
     def do_POST(self):
-        """Cria um registro ou autentica. /api/login segue para _entrar. O resto segue para _gravar."""
-        if self.path.split("?")[0].rstrip("/") == "/api/login":
+        """Cria um registro ou autentica. /api/login segue para _entrar, /api/padroes/<nome> para _padrao. O resto segue para _gravar."""
+        caminho = self._caminho()
+        if caminho == "/api/login":
             self._entrar()
+            return
+        if caminho.startswith("/api/padroes/"):
+            self._padrao(caminho.removeprefix("/api/padroes/"))
             return
         tabela, registro_id = self._rota()
         if tabela is None or registro_id is not None:
@@ -57,6 +62,20 @@ class Api(BaseHTTPRequestHandler):
             return
         papel = "funcionario" if isinstance(usuario, Funcionario) else "cliente"
         self._json(200, {"id": usuario.id, "nome": usuario.nome, "email": usuario.email, "papel": papel})
+
+    def _padrao(self, nome: str):
+        """Uso de do_POST em /api/padroes/<nome>. Executa a classe filha escolhida nas telas de demonstração, em backend/api/padroes.py."""
+        if nome not in padroes.ROTAS:
+            self._json(404, {"erro": "Padrão não encontrado"})
+            return
+        try:
+            self._json(200, padroes.executar(nome, self._corpo()))
+        except (KeyError, TypeError):
+            self._json(400, {"erro": "Preencha todos os campos."})
+        except ValueError as falha:
+            self._json(400, {"erro": str(falha)})
+        except sqlite3.IntegrityError:
+            self._json(400, {"erro": "O cliente ou o agendamento não existe no banco."})
 
     def do_PUT(self):
         """Atualiza um registro. Segue para _gravar, que chama repositorio.atualizar."""
@@ -100,6 +119,10 @@ class Api(BaseHTTPRequestHandler):
             self._json(404, {"erro": "Registro não encontrado"})
             return
         self._json(200, registro)
+
+    def _caminho(self) -> str:
+        """Caminho do pedido sem a query e sem a barra final."""
+        return self.path.split("?")[0].rstrip("/")
 
     def _rota(self) -> tuple[str | None, int | None]:
         """Uso dos verbos HTTP. /api/<tabela> ou /api/<tabela>/<id>. None se a tabela não está em COLUNAS."""

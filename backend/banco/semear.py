@@ -115,6 +115,8 @@ COLUNAS_NOVAS = {
     "notificacoes": [
         ("codigo", "TEXT NOT NULL DEFAULT ''"),
         ("segmento", "TEXT NOT NULL DEFAULT ''"),
+        ("canal", "TEXT NOT NULL DEFAULT ''"),
+        ("destino", "TEXT NOT NULL DEFAULT ''"),
     ],
     "configuracoes": [
         ("conteudo", "TEXT NOT NULL DEFAULT ''"),

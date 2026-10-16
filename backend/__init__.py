@@ -2,35 +2,30 @@
 
 __version__ = "1.0.0"
 
-from backend.alocacao import AlocacaoService, EstrategiaAlocacao, PorEspecialidade, PrimeiroAtivo
-from backend.atendimento import Atendimento, AtendimentoBarbearia, AtendimentoPetshop
+from backend.alocacao_strategy import AlocacaoService, EstrategiaAlocacao, PorEspecialidade, PrimeiroAtivo
+from backend.atendimento_method import Atendimento, AtendimentoBarbearia, AtendimentoPetshop
 from backend.catalogo import Servico, ServicoFuncionario
-from backend.comunicacao import (
+from backend.comunicacao_strategy import (
     EstrategiaNotificacao,
     Notificacao,
-    NotificacaoConfirmacao,
-    NotificacaoLembrete,
-    NotificacaoRecuperacaoSenha,
+    NotificacaoEmail,
+    NotificacaoService,
+    NotificacaoWhatsApp,
 )
 from backend.configuracao import Configuracao, ConfiguracaoService, Estabelecimento, ModuloAcesso
 from backend.conexao_banco import ConexaoBanco
-from backend.pessoas import Administrador, Cliente, Funcionario, HorarioAtendimento, Usuario
-from backend.preco import EstrategiaPreco, PrecoCheio, PrecoDesconto, PrecoService
-from backend.relatorio import Relatorio, RelatorioAgenda, RelatorioFinanceiro
-from backend.servicos import (
-    AgendamentoService,
-    AutenticacaoService,
-    NotificacaoService,
-    PagamentoService,
-)
-from backend.venda import (
-    Agendamento,
-    AgendamentoServico,
+from backend.pagamento_method import (
+    Pagamento,
     PagamentoCartao,
     PagamentoDinheiro,
     PagamentoPix,
-    RegrasAgenda,
+    PagamentoService,
 )
+from backend.pessoas import Administrador, Cliente, Funcionario, HorarioAtendimento, Usuario
+from backend.preco_strategy import EstrategiaPreco, PrecoCheio, PrecoDesconto, PrecoService
+from backend.relatorio_method import Relatorio, RelatorioAgenda, RelatorioFinanceiro
+from backend.servicos import AgendamentoService, AutenticacaoService
+from backend.venda import Agendamento, AgendamentoServico, RegrasAgenda
 
 __all__ = [
     "ConexaoBanco",
@@ -48,14 +43,14 @@ __all__ = [
     "ServicoFuncionario",
     "Agendamento",
     "AgendamentoServico",
+    "Pagamento",
     "PagamentoPix",
     "PagamentoCartao",
     "PagamentoDinheiro",
     "Notificacao",
     "EstrategiaNotificacao",
-    "NotificacaoConfirmacao",
-    "NotificacaoLembrete",
-    "NotificacaoRecuperacaoSenha",
+    "NotificacaoEmail",
+    "NotificacaoWhatsApp",
     "AutenticacaoService",
     "AgendamentoService",
     "PagamentoService",

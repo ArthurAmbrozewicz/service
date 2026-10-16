@@ -43,13 +43,13 @@ class ConexaoBanco:
             return cursor.lastrowid
 
     def salvar(self, tabela: str, registro) -> int:
-        """Converte o objeto em INSERT. Chamado por AgendamentoService, Pagamento.executar e NotificacaoService. Segue para executar e escreve registro.id."""
+        """Converte o objeto em INSERT, com as colunas extras que o objeto tiver. Chamado por AgendamentoService, Pagamento.executar e NotificacaoService. Segue para executar e escreve registro.id."""
         from dataclasses import asdict
 
-        from backend.banco.repositorio import COLUNAS
+        from backend.banco.repositorio import COLUNAS, EXTRAS
 
         dados = asdict(registro)
-        colunas = COLUNAS[tabela]
+        colunas = COLUNAS[tabela] + [coluna for coluna in EXTRAS.get(tabela, []) if coluna in dados]
         novo_id = self.executar(
             f"INSERT INTO {tabela} ({', '.join(colunas)}) VALUES ({', '.join('?' for _ in colunas)})",
             tuple(dados[coluna] for coluna in colunas),

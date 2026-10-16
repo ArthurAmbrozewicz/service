@@ -28,7 +28,7 @@ EXTRAS = {
     "servicos": ["segmento"],
     "agendamentos": ["segmento", "pet_nome"],
     "pagamentos": ["segmento", "descricao", "recorrente", "vencimento", "plano"],
-    "notificacoes": ["segmento"],
+    "notificacoes": ["segmento", "canal", "destino"],
     "configuracoes": ["conteudo"],
 }
 
